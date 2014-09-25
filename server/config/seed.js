@@ -47,3 +47,29 @@ Movie.find({}).remove(function() {
         rating : 2
     });
 });
+
+var Course = require('../api/course/course.model');
+
+Course.find({}).remove(function() {
+    Course.create({
+        name : 'CSci 1201: Introduction to Digital Media Computation',
+        grade: 'A',
+        gradepoints : 4,
+        credits : 4
+    }, {
+        name : 'CSci 1302: Foundations of Computer Science',
+        grade: 'A',
+        gradepoints : 4,
+        credits : 4
+    }, {
+        name : 'CSci 2101: Data Structures',
+        grade: 'A',
+        gradepoints : 4,
+        credits : 5
+    }, {
+        name : 'CSci 3601: Software Design and Development',
+        grade: 'A',
+        gradepoints : 4,
+        credits : 5
+    });
+});
