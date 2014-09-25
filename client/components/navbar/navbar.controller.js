@@ -6,8 +6,14 @@ angular.module('yeoMeanApp')
       'title': 'Home',
       'link': '/'
     },
-    {'title': 'UMM',
-    'link': '/umm'}];
+    {
+        'title': 'UMM',
+        'link': '/umm'
+    },
+    {
+        'title': 'GPA',
+        'link': '/gpacalc'}
+    ];
 
     $scope.isCollapsed = true;
 
