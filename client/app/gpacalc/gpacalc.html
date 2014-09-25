@@ -1,3 +1,40 @@
-<div class="col-md-12">
-This is the gpacalc view.
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+    <div class="container">
+        <h1>Courses!</h1>
+
+        <p class="lead">A simple GPA calculator<br/>
+            <small>Designed by KK Lamberty</small>
+        </p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Courses:</h1>
+            <ul>
+                <li ng-model="course" ng-repeat="course in courseList">Course: {{course.name}}, Grade: {{course.grade}}
+                    <button class="btn btn-xs btn-danger" ng-click="deleteMovie(movie)">Delete</button>
+                </li>
+            </ul>
+            <hr>
+            <h3>Add A Course:</h3>
+
+            <form role="form" ng-submit="addCourse()">
+                <label for="courseName">Course Name
+                <input class="form-control" id="courseName" type="text" ng-model="newCourse" size="30"
+                       placeholder="Course Name"></label>
+                <label for="courseGrade">Course Grade
+                <input class="form-control" id="courseGrade" type="number" max="10" min="1" ng-model="newGrade"
+                       placeholder="Grade"></label>
+                <label for="courseCredits">Credits
+                <input class="form-control" id="courseCredits" type="number" max="10" min="1" ng-model="newCourseCredits"
+                       placeholder="0"></label>
+                <br>
+                <input class="btn btn-primary" type="submit" value="Add"></label>
+            </form>
+        </div>
+    </div>
 </div>
