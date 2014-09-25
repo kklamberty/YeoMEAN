@@ -5,6 +5,7 @@ var mongoose = require('mongoose'),
 
 var CourseSchema = new Schema({
   name: String,
+  grade: String,
   gradepoints: Number,
   credits: Number
 });
