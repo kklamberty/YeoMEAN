@@ -16,7 +16,7 @@
             <h1 class="page-header">Courses:</h1>
             <ul>
                 <li ng-model="course" ng-repeat="course in courseList">Course: {{course.name}}, Grade: {{course.grade}}
-                    <button class="btn btn-xs btn-danger" ng-click="deleteMovie(movie)">Delete</button>
+                    <button class="btn btn-xs btn-danger" ng-click="deleteCourse(course)">Delete</button>
                 </li>
             </ul>
             <hr>
@@ -27,7 +27,7 @@
                 <input class="form-control" id="courseName" type="text" ng-model="newCourse" size="30"
                        placeholder="Course Name"></label>
                 <label for="courseGrade">Course Grade
-                <input class="form-control" id="courseGrade" type="number" max="10" min="1" ng-model="newGrade"
+                <input class="form-control" id="courseGrade" type="text" ng-model="newGrade"
                        placeholder="Grade"></label>
                 <label for="courseCredits">Credits
                 <input class="form-control" id="courseCredits" type="number" max="10" min="1" ng-model="newCourseCredits"
@@ -35,6 +35,7 @@
                 <br>
                 <input class="btn btn-primary" type="submit" value="Add"></label>
             </form>
+            <h3>Your GPA: {{gpa}}</h3>
         </div>
     </div>
 </div>
